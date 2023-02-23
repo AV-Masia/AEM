@@ -1,0 +1,32 @@
+<multifield
+        xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+        xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+        xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+        composite="{Boolean}true"
+        fieldLabel="Multifield">
+    <field
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container"
+            name="./multifields">
+        <items jcr:primaryType="nt:unstructured">
+
+            <column
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+
+                    <title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldDescription="fieldDescription"
+                            fieldLabel="fieldLabel"
+                            name="./text"
+                            required="true"/>
+                </items>
+            </column>
+        </items>
+    </field>
+</multifield>

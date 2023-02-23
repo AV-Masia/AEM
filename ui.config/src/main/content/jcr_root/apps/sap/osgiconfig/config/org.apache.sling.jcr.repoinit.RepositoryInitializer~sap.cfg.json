@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/sap",
+        "create path (nt:unstructured) /content/dam/sap/jcr:content",
+        "set properties on /content/dam/sap/jcr:content\n  set cq:conf{String} to /conf/sap\n  set jcr:title{String} to \"SAP Developers\"\nend"
+    ]
+}
