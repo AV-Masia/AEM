@@ -16,7 +16,18 @@
 <div class="cmp-helloworld" data-cmp-is="helloworld">
     <h2 class="cmp-helloworld__title">Dialog: textfield</h2>
     <div>resourceType: granite/ui/components/coral/foundation/form/textfield</div>
-    <div class="cmp-helloworld__item" data-sly-test="${properties.text}">
+    <div class="cmp-helloworld_item text_color" data-sly-test="${properties.text}">
         ${properties.text}
     </div>
+    <div class="cmp-helloworld_item text_color" data-sly-test="${properties.text1}">
+        ${properties.text1}
+    </div>
 </div>
+<div class="cmp-helloworld__item" data-sly-use.model="com.sap.core.models.redesign.TextFieldModel" data-sly-test="${model.result}">
+    <p class="cmp-helloworld__item-label">Model text: ${model.text @ context='html'} </p>
+    <p class="cmp-helloworld__item-label">Model text1: ${model.text1 @ context='html'} </p>
+    <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.result @ context='html'}</pre>
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='com.sap.redesign.component.ui.textfield'}"></sly>

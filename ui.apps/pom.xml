@@ -122,6 +122,13 @@
 
         <dependency>
             <groupId>com.sap</groupId>
+            <artifactId>com.sap.ui.frontend</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sap</groupId>
             <artifactId>com.sap.ui.apps.structure</artifactId>
             <version>${project.version}</version>
             <type>zip</type>

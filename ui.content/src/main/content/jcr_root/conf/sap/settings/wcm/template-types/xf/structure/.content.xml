@@ -5,7 +5,7 @@
         cq:deviceGroups="[mobile/groups/responsive]"
         cq:template="/conf/sap/settings/wcm/templates/empty-experience-fragment"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="sap/components/xfpage">
+        sling:resourceType="sap/components/page">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="sap/components/container"

@@ -3,9 +3,10 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:redirectTarget="/content/sap/us/en"
-        cq:template="/conf/sap/settings/wcm/templates/page-content"
+        cq:template="/conf/sap/settings/wcm/templates/page-empty"
+        cq:allowedPath="/content/sap/us/[^/]+(/.*)?"
         jcr:primaryType="cq:PageContent"
         jcr:title="us"
-        sling:resourceType="sap/components/page"/>
+        sling:resourceType="foundation/components/redirect"/>
     <en/>
 </jcr:root>
