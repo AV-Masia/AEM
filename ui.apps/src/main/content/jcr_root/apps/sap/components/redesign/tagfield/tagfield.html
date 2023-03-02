@@ -19,4 +19,15 @@
     <div class="cmp-helloworld__item" data-sly-test="${properties.tagNames}">
         ${properties.tagNames @ context='html'}
     </div>
+    <div class="cmp-helloworld__item" data-sly-use.model="com.sap.core.models.redesign.TagFieldModel" data-sly-test="${model.result}">
+        <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.result @ context='html'}</pre>
+        <div class="cmp-helloworld__item-output">array</div>
+        <ul class="icons" data-sly-list.state="${model.tagNames}">
+            <li>${state}</li>
+        </ul>
+        <div class="cmp-helloworld__item-output">list</div>
+        <ul class="icons" data-sly-list.state="${model.result}">
+            <li>${state}</li>
+        </ul>
+    </div>
 </div>

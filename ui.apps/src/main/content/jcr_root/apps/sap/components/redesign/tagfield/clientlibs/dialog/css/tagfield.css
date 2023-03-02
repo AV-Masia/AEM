@@ -1,0 +1,8 @@
+.coral-InputGroup-input {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    background: gray;
+    border-radius: 5px;
+}

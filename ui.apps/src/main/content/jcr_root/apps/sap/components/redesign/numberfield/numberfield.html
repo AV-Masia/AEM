@@ -13,6 +13,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
+<sly data-sly-test.isEmptyComponent="${!properties.id}"></sly>
 <div class="cmp-helloworld" data-cmp-is="helloworld">
     <h2 class="cmp-helloworld__title">Dialog: numberfield</h2>
     <div>resourceType: granite/ui/components/coral/foundation/form/numberfield</div>
@@ -22,5 +23,22 @@
     <div class="cmp-helloworld__item" data-sly-test="${properties.id}">
         ${properties.id @ context='html'}
     </div>
-
 </div>
+<div class="cmp-helloworld__item" data-sly-use.model="com.sap.core.models.redesign.NumberfieldModel" data-sly-test="${model.result}">
+    <p class="cmp-helloworld__item-label">Model startLevel: ${model.startLevel @ context='html'} </p>
+    <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.result @ context='html'}</pre>
+    <div class="cmp-helloworld__item-output">You id and level</div>
+        <ul class="icon" data-sly-list.state="${model.result}">
+            <li>
+                ${state}
+            </li>
+        </ul>
+</div>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='com.sap.redesign.component.ui.numberfield'}"></sly>
+<div data-sly-test="${wcmmode.edit && isEmptyComponent}" class="cq-placeholder"
+     data-emptytext="Dialog: numberfield"></div>
+
+
+
+

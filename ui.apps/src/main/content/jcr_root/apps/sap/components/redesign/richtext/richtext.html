@@ -13,6 +13,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
+<sly data-sly-test.isEmptyComponent="${!properties.richtext1}"></sly>
 <div class="cmp-helloworld" data-cmp-is="helloworld">
     <h2 class="cmp-helloworld__title">Dialog: richtext</h2>
     <div>resourceType: granite/ui/components/coral/foundation/form/richText </div>
@@ -20,3 +21,12 @@
         ${properties.richtext1 @ context='html'}
     </div>
 </div>
+<div class="cmp-helloworld__item" data-sly-use.model="com.sap.core.models.redesign.RichTextModel" data-sly-test="${model.result}">
+    <p class="cmp-helloworld__item-label">Model richtext1: ${model.richtext1 @ context='html'} </p>
+    <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.result @ context='html'}</pre>
+</div>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='com.sap.redesign.component.ui.richtext'}"></sly>
+<div data-sly-test="${wcmmode.edit && isEmptyComponent}" class="cq-placeholder"
+     data-emptytext="Dialog: richtext"></div>

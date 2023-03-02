@@ -13,10 +13,15 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
+<sly data-sly-test.isEmptyComponent="${!properties.allowedColorSwatches}"></sly>
 <div class="cmp-helloworld" data-cmp-is="helloworld">
     <h2 class="cmp-helloworld__title">Dialog: colorfield</h2>
     <div>resourceType: granite/ui/components/coral/foundation/form/colorfield</div>
-    <div class="cmp-helloworld__item" data-sly-test="${properties.allowedColorSwatches}">
-        ${properties.allowedColorSwatches @ context='html'}
+    <div class="cmp-helloworld__item colorfield" data-sly-test="${properties.allowedColorSwatches}">
+        <div class="allowed_color">!!! ${properties.allowedColorSwatches @ context='html'}</div>
     </div>
 </div>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='com.sap.redesign.component.ui.colorfield'}"></sly>
+<div data-sly-test="${wcmmode.edit && isEmptyComponent}" class="cq-placeholder"
+     data-emptytext="Dialog: colorfield"></div>

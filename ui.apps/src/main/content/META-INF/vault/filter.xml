@@ -3,4 +3,5 @@
     <filter root="/apps/sap/clientlibs"/>
     <filter root="/apps/sap/components"/>
     <filter root="/apps/sap/i18n"/>
+    <filter root="/apps/sap/templates"/>
 </workspaceFilter>

@@ -19,4 +19,8 @@
     <div class="cmp-helloworld__item" data-sly-test="${properties.textarea}">
         ${properties.textarea}
     </div>
+    <div class="cmp-helloworld__item" data-sly-use.model="com.sap.core.models.redesign.TextAreaModel" data-sly-test="${model.result}">
+        <p class="cmp-helloworld__item-label">Model text: ${model.textarea @ context='html'} </p>
+        <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.result @ context='html'}</pre>
+    </div>
 </div>

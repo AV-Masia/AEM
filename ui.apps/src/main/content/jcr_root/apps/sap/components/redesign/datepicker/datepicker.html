@@ -17,4 +17,15 @@
     <h2 class="cmp-helloworld__title">Dialog: datepicker</h2>
     <div>resourceType: granite/ui/components/coral/foundation/form/datepicker</div>
 
+    <div class="cmp-helloworld__item" data-sly-test="${properties.datepickerStart}">
+        ${properties.datepickerStart @ context='html'}
+    </div>
+    <div class="cmp-helloworld__item" data-sly-test="${properties.datepickerEnd}">
+        ${properties.datepickerEnd @ context='html'}
+    </div>
 </div>
+<div class="cmp-helloworld__item" data-sly-use.model="com.sap.core.models.redesign.DatepickerModel" data-sly-test="${model.result}">
+<!--    <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">Work time: ${model.result @ context='html'}</pre>-->
+</div>
+<div class="cmp-helloworld__item-output">Work days:</div>
+<pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.result @ context='html'}</pre>

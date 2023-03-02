@@ -16,5 +16,12 @@
 <div class="cmp-helloworld" data-cmp-is="helloworld">
     <h2 class="cmp-helloworld__title">Dialog: switch</h2>
     <div>resourceType: granite/ui/components/coral/foundation/form/switch</div>
+    <div class="cmp-helloworld_item text_color" data-sly-test="${properties.linkUrlTarget}">
+        ${properties.linkUrlTarget}
+    </div>
 </div>
 <div> ! resourceType: granite/ui/components/coral/foundation/form/switch</div>
+
+<div class="cmp-helloworld__item" data-sly-use.model="com.sap.core.models.redesign.SwitchModel" data-sly-test="${model.result}">
+    <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.result @ context='html'}</pre>
+</div>

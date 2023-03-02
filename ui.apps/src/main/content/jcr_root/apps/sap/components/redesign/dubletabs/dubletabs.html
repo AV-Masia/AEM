@@ -13,6 +13,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
+
 <div class="cmp-helloworld" data-cmp-is="helloworld">
     <h2 class="cmp-helloworld__title">Dialog: dubletabs</h2>
     <div>resourceType: granite/ui/components/coral/foundation/form/dubletabs</div>
@@ -23,3 +24,15 @@
         ${properties.richtext2 @ context='html'}
     </div>
 </div>
+
+<div class="cmp-helloworld__item" data-sly-use.model="com.sap.core.models.redesign.DubletabsModel" data-sly-test="${model.result}">
+    <pre class="cmp-helloworld__item-output"data-cmp-hook-helloworld="model">${model.result @ context='html'}</pre>
+    <div class="cmp-helloworld__item-output">All you text</div>
+    <ul class="icon" data-sly-list.state="${model.result}">
+        <li>
+            ${state @ context='html'}
+        </li>
+    </ul>
+</div>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='com.sap.redesign.component.ui.dubletabs'}"></sly>

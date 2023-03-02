@@ -1,0 +1,61 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-use.templates="templates.html"
+     data-sly-use.model="com.sap.core.models.navigationfooter.NavigationFooter"
+     data-sly-test.hasContent="${model.title}"
+     class="cmp-sap-model__footer"
+>
+    <div class="cmp-sap-model__footer_bg">
+        <div class="container">
+            <div id="footer">
+                <footer>
+                    <div class="row-fluid">
+                        <section data-sly-test="${model.footerGroupLinksCol}" class="footer-links" data-sly-list.footerGroup="${model.footerGroupLinksCol}">
+                            <div class="span3">
+                                <h4>${footerGroup.groupTitle}</h4>
+                                <ul class="unstyled" data-sly-list.linksNames="${footerGroup.linksNames}">
+                                    <li><a href="${linksNames.link}" rel="${linksNames.typeOfOpen}">${linksNames.descriptionLink}</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div id="footer-sub">
+                        <div class="row-fluid">
+                            <div class="footer-contact span12">
+
+                                <ul class="inline social pull-right">
+                                    <li><a href="${model.linkTo}" rel="${model.typeOfOpen}">${model.title}</a></li>
+                                </ul>
+                                <ul data-sly-test="${model.socialsCol}" class="inline social pull-right" data-sly-list.socials="${model.socialsCol}">
+                                    <li>
+                                        <div class="cq-dd-image socials_group__image">
+                                            <a href="${socials.link}" rel="${socials.typeOfOpen}">
+                                                <img class="cmp-socials__image--link"
+                                                     alt="${socials.title}" title="${socials.title}"
+                                                     src="${socials.fileReference}"/>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div class="copyright">
+                                    <ul data-sly-test="${model.copyrightsColPartOne}" class="inline primary" data-sly-list.copyrightsColPartOne="${model.copyrightsColPartOne}">
+                                        <li><a href="${copyrightsColPartOne.link}" rel="${copyrightsColPartOne.typeOfOpen}">${copyrightsColPartOne.descriptionLink}</a></li>
+                                    </ul>
+
+                                    <ul data-sly-test="${model.copyrightsColPartTwo}" class="inline" data-sly-list.copyrightsColPartTwo="${model.copyrightsColPartTwo}">
+                                        <li><a href="${copyrightsColPartTwo.link}" rel="${copyrightsColPartTwo.typeOfOpen}">${copyrightsColPartTwo.descriptionLink}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+</sly>
+
+<sly data-sly-call="${clientLib.all @ categories=['sap.components.navigation.v3.viewer']}"></sly>
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent, classAppend='cmp-sap-model__footer'}"></sly>

@@ -33,9 +33,9 @@
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/switch"
                                                     fieldDescription="check - new tab / uncheck - self tab"
                                                     name="./linkUrlTarget"
-                                                    value="_blank"
-                                                    uncheckedValue="_self"
-                                                    checked="{Boolean}true"
+                                                    value="{Boolean}true"
+                                                    uncheckedValue="{Boolean}false"
+                                                    checked="{Boolean}false"
                                                     granite:class="cq-dialog-container-link-info-well-linkUrlTarget"/>
                                         </items>
                                     </column>

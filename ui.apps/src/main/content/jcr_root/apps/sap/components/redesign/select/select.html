@@ -22,4 +22,19 @@
     <div class="cmp-helloworld__item" data-sly-test="${properties.select}">
         ${properties.select @ context='html'}
     </div>
+
+    <div class="cmp-helloworld__item" data-sly-use.model="com.sap.core.models.redesign.SelectModel" data-sly-test="${model.result}">
+        <p class="cmp-helloworld__item-label">Model multiselect: ${model.multiselect @ context='html'} </p>
+        <div class="cmp-helloworld__item-output">array</div>
+        <ul class="icons" data-sly-list.state="${model.multiselect}">
+            <li>${state}</li>
+        </ul>
+        <div class="cmp-helloworld__item-output">list</div>
+        <ul class="icons" data-sly-list.state="${model.result}">
+            <li>${state}</li>
+        </ul>
+    </div>
+
+
+
 </div>
